@@ -1,0 +1,127 @@
+<templateSet group="Model">
+  <template name="class" value="class $class$($object$):&#10;    &quot;&quot;&quot;$cls_doc$&quot;&quot;&quot;&#10;    &#10;    def __init__(self, $args$):&#10;        $END$" description="New Class" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="object" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cls_doc" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="args" expression="" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="model" value="class $class$(models.Model):&#10;    &#10;    def __str__(self):&#10;        return self.name&#10;        &#10;    class Meta:&#10;        verbose_name = ''&#10;        verbose_name_plural = ''&#10;    " description="Django Model" toReformat="false" toShortenFQNames="true">
+    <variable name="class" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="cf" value="$field$ = models.CharField(max_length=180)" description="CharField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ff" value="$field$ = models.FloatField()" description="FloatField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="inf" value="$field$ = models.IntegerField()" description="IntegerField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="created_at" value="created_at = models.DateTimeField(auto_now_add=True)" description="created_at" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="fk" value="$field$ = models.ForeignKey($model$)" description="ForeignKey" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="__str" value="def __str__(self):&#10;    return self.name&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="tf" value="$field$ = models.TextField()" description="TextField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="btf" value="$field$ = models.TextField(blank=True)" description="blank TextField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="imf" value="$field$ = models.ImageField(upload_to='$folder$')" description="ImageField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="folder" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="bf" value="$field$ = models.BooleanField(default=True)" description="BooleanField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ninf" value="$field$ = models.IntegerField(blank=True, null=True)" description="null IntegerField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="df" value="$field$ = models.DateField()" description="DateField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ndf" value="$field$ = models.DateField(blank=True, null=True)" description="null DateField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="bcf" value="$field$ = models.CharField(max_length=$max$, blank=True)" description="blank CharField" toReformat="false" toShortenFQNames="true">
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="max" expression="" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="meta" value="class Meta:&#10;    verbose_name = u'$name$'&#10;    verbose_name_plural = u'$name$'&#10;    " description="class Meta" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ipdb" value="import ipdb; ipdb.set_trace()" description="ipdb" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="_order" value="order = models.PositiveSmallIntegerField(default=0)" description="Model Order" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="ser" value="class $model$Serializer(serializers.ModelSerializer):&#10;        &#10;    class Meta:&#10;        model = $model$&#10;&#10;&#10;" description="Serializer" toReformat="false" toShortenFQNames="true">
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="uget" value="from django.utils.translation import ugettext_lazy as _" description="ugettext" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
