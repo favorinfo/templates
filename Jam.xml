@@ -1,9 +1,16 @@
 <templateSet group="Jam">
-  <template name="1todo" value="''' @todo: $todo$ '''" description="oneline todo" toReformat="false" toShortenFQNames="true">
+  <template name="1todo" value="&quot;&quot;&quot; @todo: $todo$ &quot;&quot;&quot;" description="oneline todo" toReformat="false" toShortenFQNames="true">
     <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="Django" value="true" />
       <option name="Python" value="true" />
+      <option name="Django" value="true" />
+    </context>
+  </template>
+  <template name="todo" value="&quot;&quot;&quot;&#10;    @todo: $todo$ &#10;&quot;&quot;&quot;" description="todo" toReformat="false" toShortenFQNames="true">
+    <variable name="todo" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+      <option name="Django" value="true" />
     </context>
   </template>
 </templateSet>
